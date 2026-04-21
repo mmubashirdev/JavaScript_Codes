@@ -1,12 +1,14 @@
-var h1 = document.createElement('h1');
-h1.innerText='Type your name';
-var input = document.createElement;
-input.setAttribute('type', text)
 
-document.body.innerText = '';
-document.body.appendChild(h1);
-document.body.appendChild(input);
+const person = {
+  firstName:"Muhammad",
+  lastName:"Mubashir",
+  age:23,
+  cars:{
+    brand:"BMW M5",
+    model:new Date()
+  }
+}
 
-input.addEventListener('change', function(){
-    h1.innerText = input.value;
-})
+let {firstName, lastName, age, country = "Pakistan", cars:{brand,model}} = person;
+
+console.log(firstName, lastName, "is", age,"years old,\n Living in:",country, "will one day get a ",brand, "model",model  );
