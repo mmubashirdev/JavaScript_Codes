@@ -8,8 +8,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "This repository contains all the JavaScript code snippets and small programs I practiced while learning JavaScript.",
   "devDependencies": {
     "jest": "^30.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmubashirdev/JavaScript_Codes.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mmubashirdev/JavaScript_Codes/issues"
+  },
+  "homepage": "https://github.com/mmubashirdev/JavaScript_Codes#readme"
 }

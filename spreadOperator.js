@@ -75,3 +75,36 @@ const favoriteBaseballTeams = ["Yankees", "Mets", "Dodgers", "Giants", "Red Sox"
 const favoriteFootballTeams = ["Patriots", "Giants", "Jets", "Eagles", "Steelers", "Cowboys"];
 const merge = [...favoriteBaseballTeams,...favoriteFootballTeams];
 console.log(merge);
+
+
+
+// copying all or a part of an existing array or object into another array or object
+let arr1 = [1,2,3,4,5,6];
+let arr2 = [7,8,9,10];
+
+let combinedArr = [...arr1,...arr2];
+console.log(combinedArr);
+
+let nums = [1,2,3,4,5,6,7,8,9,10];
+let [num1, num2, ...arr] = nums;
+
+console.log(num1)
+console.log(num2)
+console.log(arr)
+
+
+const car = {
+  brand:"BMW",
+  model:2026,
+  color:"black"
+}
+
+const car_info = {
+  chassis_no : 67676767,
+  num_plate:911,
+  color:"White"
+}
+
+const BMW = {...car,...car_info};
+
+console.log(BMW);
