@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Preview</title>
+    <style>
+      input[type="file"] {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" name="image" id="imageInput" hidden accept="image/*" />
+    <img
+      src=""
+      alt=""
+      id="imagePreview"
+      style="display: none; width: 300px; height: auto"
+    />
+    <script src="./imagePreview.js"></script>
+    <!-- The hidden input -->
+<input type="file" id="up" hidden accept="image/*">
+
+<label for="up" style="display: flex; width: 200px; height: 200px; border: 1px solid #333; cursor: pointer; align-items: center; justify-content: center;">
+  <img id="pre" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+  <span id="msg">Click to Upload</span>
+</label>
+
+<script>
+  const up = document.getElementById('up');
+  const pre = document.getElementById('pre');
+  const msg = document.getElementById('msg');
+
+  up.onchange = () => {
+    const [file] = up.files; // Array destructuring to get the first file
+    if (file) {
+      pre.src = URL.createObjectURL(file);
+      pre.style.display = 'block';
+      msg.style.display = 'none';
+    }
+  };
+</script>
+  </body>
+</html>
